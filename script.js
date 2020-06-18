@@ -15,6 +15,16 @@ function showDate(){
 	if(seconds < 10){
 	var seconds = "0" + seconds ;}
 	
+	if (hours<20 ){
+	document.getElementById("night").style.display="none";
+	document.getElementById("day").style.display="flex";
+	document.getElementById("body").style.backgroundColor="#4da6ff";
+	}else {
+	document.getElementById("night").style.display = "flex";
+	document.getElementById("day").style.display="none";
+	document.getElementById("body").style.backgroundColor="#000033";
+	}
+	
 	
 	document.getElementById("clock").innerHTML= hours+ ":" + minutes + ":" + seconds; //Put the time
 	
@@ -26,16 +36,7 @@ function showDate(){
 	
 	setTimeout(showDate, 1000);
 	
-	if (7<hours<20){
-	document.getElementById("night").style.display="none";
-	document.getElementById("day").style.display="flex";
-	document.getElementById("body").style.backgroundColor="#4da6ff";
-	}else{
-	document.getElementById("night").style.display = "flex";
-	document.getElementById("day").style.display="none";
-	document.getElementById("body").style.backgroundColor="#000033";
 	
-	}
 }
 showDate();
 
