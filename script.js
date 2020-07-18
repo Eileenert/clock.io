@@ -19,7 +19,7 @@ function showDate(){
 	document.getElementById("night").style.display="none";
 	document.getElementById("day").style.display="flex";
 	document.getElementById("body").style.backgroundColor="#4da6ff";
-	}else if (hours>20 || hours<7) {
+	}else if (hours>=20 || hours<7) {
 	document.getElementById("night").style.display = "flex";
 	document.getElementById("day").style.display="none";
 	document.getElementById("body").style.backgroundColor="#000033";
